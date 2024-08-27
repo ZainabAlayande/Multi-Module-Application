@@ -1,7 +1,7 @@
-package com.example.controller;
+package com.example.multimodule.controller;
 
 
-import com.example.service.PatientService;
+import com.example.multimodule.service.PatientService;
 
 public class PatientController {
 

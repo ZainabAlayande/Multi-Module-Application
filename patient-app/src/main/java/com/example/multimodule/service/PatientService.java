@@ -1,6 +1,6 @@
-package com.example.service;
+package com.example.multimodule.service;
 
-import com.example.model.Patient;
+import com.example.multimodule.model.Patient;
 
 import java.util.List;
 

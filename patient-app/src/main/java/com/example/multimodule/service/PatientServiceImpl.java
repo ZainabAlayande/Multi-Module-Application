@@ -1,7 +1,7 @@
-package com.example.service;
+package com.example.multimodule.service;
 
-import com.example.model.Patient;
-import com.example.repository.PatientRepository;
+import com.example.multimodule.model.Patient;
+import com.example.multimodule.repository.PatientRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
