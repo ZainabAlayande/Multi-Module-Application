@@ -1,8 +1,14 @@
 package com.example.multimodule.controller;
 
 
+import com.example.multimodule.model.Patient;
 import com.example.multimodule.service.PatientService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+@RestController
+@RequestMapping("/api")
 public class PatientController {
 
     private final PatientService patientService;
@@ -11,12 +17,17 @@ public class PatientController {
         this.patientService = patientService;
     }
 
-    public Object createPatientRecord() {
-        return patientService.createPatientAccount("", "", "");
+    @PostMapping("/create-patient")
+    public ResponseEntity<?> createPatientRecord(@RequestBody PatientDto patientDto) {
+        Patient newPatient = patientService.createPatientAccount(patientDto.getName(), patientDto.getPhoneNumber(), patientDto.getEmail());
+        return ResponseEntity.status(HttpStatus.CREATED).body(newPatient);
     }
 
-    public Object getAllPatientRecord() {
-        return patientService.getAllPatient();
+
+    @GetMapping("/patients")
+    public ResponseEntity<?> getAllPatientRecord() {
+        var response = patientService.getAllPatient();
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
 
