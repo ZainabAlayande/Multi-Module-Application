@@ -26,6 +26,7 @@
         <module>patient-app</module>
         <module>diagnosis-app</module>
         <module>billing-app</module>
+        <module>email-app</module>
     </modules>
     <scm>
         <connection/>
