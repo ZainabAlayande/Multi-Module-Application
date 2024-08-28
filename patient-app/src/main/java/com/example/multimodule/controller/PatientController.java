@@ -1,6 +1,7 @@
 package com.example.multimodule.controller;
 
 
+import com.example.multimodule.dto.PatientDto;
 import com.example.multimodule.model.Patient;
 import com.example.multimodule.service.PatientService;
 import org.springframework.http.HttpStatus;
